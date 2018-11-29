@@ -225,7 +225,7 @@ module.exports = function(connect) {
 			return exists;
 		})
 		.then(function (exists) {
-			if (exists) {
+			if (exists && options.clearInterval >= 0) {
 				dbCleanup(self, options.clearInterval);
 			}
 			return null;
